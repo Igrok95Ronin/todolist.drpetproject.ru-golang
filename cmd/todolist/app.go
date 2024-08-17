@@ -11,6 +11,10 @@ import (
 )
 
 func main() {
+	// Инициализация базы данных
+	db := routes.InitDB()
+	defer db.Close() // закрываем соединение с базой данных при завершении работы
+
 	// Получаем экземпляр логгера
 	logger := logging.GetLogger()
 
@@ -24,8 +28,8 @@ func main() {
 	corsH := cors.Default().Handler(router)
 
 	// Регистрируем обработчик в роутере
-	handler := routes.NewHandler(logger)
-	handler.Register(router, logger)
+	handler := routes.NewHandler(logger, db)
+	handler.Register(router)
 
 	// Запускаем приложение
 	start(corsH, cfg, logger)

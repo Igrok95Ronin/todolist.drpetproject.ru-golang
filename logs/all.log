@@ -13,3 +13,12 @@
 [36mINFO[0m[2024-08-17T16:03:38+03:00]app.go:78 main.start() The server is running on port :8081          
 [36mINFO[0m[2024-08-17T16:04:16+03:00]app.go:79 main.start() The server is running on port :8081          
 [36mINFO[0m[2024-08-17T16:17:47+03:00]app.go:44 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T20:14:43+03:00]app.go:44 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T22:01:12+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T22:01:39+03:00]register.go:31 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-17T22:01:59+03:00]register.go:31 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-17T22:02:04+03:00]register.go:31 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-17T22:09:01+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T22:09:07+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-17T22:12:03+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T22:12:08+03:00]register.go:35 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
