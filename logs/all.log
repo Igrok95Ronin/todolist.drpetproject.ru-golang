@@ -1,2 +1,15 @@
 [36mINFO[0m[2024-08-17T14:19:50+03:00]app.go:40 main.start() The server is running on port :8081          
 [36mINFO[0m[2024-08-17T14:26:19+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:28:52+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:31:20+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:32:48+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:39:03+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:40:53+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:41:55+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:43:02+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T14:44:26+03:00]app.go:40 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T15:53:19+03:00]app.go:44 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T15:54:32+03:00]app.go:44 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T16:03:38+03:00]app.go:78 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T16:04:16+03:00]app.go:79 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T16:17:47+03:00]app.go:44 main.start() The server is running on port :8081          

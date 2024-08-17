@@ -5,6 +5,7 @@ import (
 	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes"
 	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/pkg/logging"
 	"github.com/julienschmidt/httprouter"
+	"github.com/rs/cors"
 	"net/http"
 	"time"
 )
@@ -19,16 +20,19 @@ func main() {
 	// Читаем конфигурацию приложения
 	cfg := config.GetConfig(logger)
 
+	// Создайте обработчик CORS с параметрами по умолчанию.
+	corsH := cors.Default().Handler(router)
+
 	// Регистрируем обработчик в роутере
 	handler := routes.NewHandler(logger)
 	handler.Register(router, logger)
 
 	// Запускаем приложение
-	start(router, cfg, logger)
+	start(corsH, cfg, logger)
 }
 
 // Функция start запускает приложение
-func start(router *httprouter.Router, cfg *config.Config, logger *logging.Logger) {
+func start(router http.Handler, cfg *config.Config, logger *logging.Logger) {
 	server := &http.Server{
 		Handler:      router,
 		Addr:         cfg.Port,

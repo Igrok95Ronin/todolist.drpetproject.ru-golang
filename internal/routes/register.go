@@ -21,4 +21,5 @@ func NewHandler(logger *logging.Logger) handlers.Handler {
 
 func (h *handler) Register(router *httprouter.Router, logger *logging.Logger) {
 	router.GET("/", h.Home)
+	router.POST("/notes", h.CreateNote)
 }
