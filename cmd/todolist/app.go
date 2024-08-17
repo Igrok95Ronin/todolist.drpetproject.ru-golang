@@ -3,28 +3,32 @@ package main
 import (
 	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/config"
 	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes"
+	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/pkg/logging"
 	"github.com/julienschmidt/httprouter"
-	"log"
 	"net/http"
 	"time"
 )
 
 func main() {
-	// Читаем конфигурацию приложения
-	cfg := config.GetConfig()
+	// Получаем экземпляр логгера
+	logger := logging.GetLogger()
 
 	// Создаем новый HTTP роутер
 	router := httprouter.New()
 
+	// Читаем конфигурацию приложения
+	cfg := config.GetConfig(logger)
+
 	// Регистрируем обработчик в роутере
-	routes.NewHandler().Register(router)
+	handler := routes.NewHandler(logger)
+	handler.Register(router, logger)
 
 	// Запускаем приложение
-	start(router, cfg)
+	start(router, cfg, logger)
 }
 
 // Функция start запускает приложение
-func start(router *httprouter.Router, cfg *config.Config) {
+func start(router *httprouter.Router, cfg *config.Config, logger *logging.Logger) {
 	server := &http.Server{
 		Handler:      router,
 		Addr:         cfg.Port,
@@ -33,6 +37,6 @@ func start(router *httprouter.Router, cfg *config.Config) {
 		IdleTimeout:  15 * time.Second,
 	}
 
-	log.Println("Start..")
-	log.Fatal(server.ListenAndServe())
+	logger.Infof("The server is running on port %s", cfg.Port)
+	logger.Fatal(server.ListenAndServe())
 }
