@@ -4,6 +4,7 @@ go 1.22.2
 
 require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
 	github.com/ilyakaznacheev/cleanenv v1.5.0 // indirect
 	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect

@@ -30,12 +30,13 @@ func (h *handler) Register(router *httprouter.Router) {
 		return func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 			ctx := context.WithValue(r.Context(), "db", h.db)
 			next(w, r.WithContext(ctx), ps)
-			h.logger.Info("DB added to context")
+			//h.logger.Info("DB added to context")
 		}
 	}
 
 	router.GET("/", h.Home)
 	router.POST("/register", dbMiddleware(h.RegisterUser)) // Маршрут для регистрации пользователя
+	router.POST("/login", dbMiddleware(h.login))           // Маршрут для авторизации пользователя
 	router.POST("/notes", h.CreateNote)
 
 }
