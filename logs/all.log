@@ -22,3 +22,58 @@
 [36mINFO[0m[2024-08-17T22:09:07+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
 [36mINFO[0m[2024-08-17T22:12:03+03:00]app.go:48 main.start() The server is running on port :8081          
 [36mINFO[0m[2024-08-17T22:12:08+03:00]register.go:35 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-17T22:14:01+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-17T22:14:03+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T14:40:33+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:27:47+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:28:47+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:29:06+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:29:06+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:29:12+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:29:12+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:29:25+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:29:25+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:29:31+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:29:31+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:30:04+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:30:04+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:34:00+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:34:19+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:34:25+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:35:35+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:35:38+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:36:00+03:00]registeruser.go:47 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:36:00+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:37:15+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:37:18+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:37:48+03:00]registeruser.go:47 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:37:48+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:39:18+03:00]app.go:48 main.start() The server is running on port :8081          
+[31mERRO[0m[2024-08-18T15:39:19+03:00]registeruser.go:47 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:39:19+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:39:32+03:00]registeruser.go:47 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:39:32+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:39:43+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:39:45+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:44:57+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:45:01+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:45:07+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:47:10+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:47:37+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:47:39+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:48:35+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:48:37+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:48:51+03:00]registeruser.go:47 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:48:51+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:55:26+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[31mERRO[0m[2024-08-18T15:55:32+03:00]registeruser.go:47 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T15:55:32+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:55:36+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:57:08+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:57:13+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:58:34+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:58:39+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T15:58:55+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T15:58:57+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
+[36mINFO[0m[2024-08-18T16:00:09+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T16:00:13+03:00]register.go:33 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Register.(*handler).Register.func1.func2() DB added to context                          
