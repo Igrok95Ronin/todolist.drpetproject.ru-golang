@@ -8,7 +8,8 @@ import (
 
 // Определяем структуру для хранения конфигурации
 type Config struct {
-	Port string `yaml:"port"`
+	Port         string `yaml:"port"`
+	MySigningKey string `yaml:"mySigningKey"`
 }
 
 // Глобальная переменная для хранения экземпляра конфигурации
@@ -18,7 +19,8 @@ var instance *Config
 var once sync.Once
 
 // Функция GetConfig возвращает экземпляр конфигурации
-func GetConfig(logger *logging.Logger) *Config {
+func GetConfig() *Config {
+	logger := logging.GetLogger()
 	once.Do(func() {
 		instance = &Config{}
 

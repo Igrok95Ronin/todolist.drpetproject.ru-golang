@@ -2,6 +2,7 @@ package routes
 
 import (
 	"context"
+	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/config"
 	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/handlers"
 	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/pkg/logging"
 	"github.com/jinzhu/gorm"
@@ -14,13 +15,15 @@ var _ handlers.Handler = &handler{} // Проверяем что интерфе�
 type handler struct {
 	logger *logging.Logger
 	db     *gorm.DB
+	cfg    *config.Config
 }
 
 // Заполняем структуру
-func NewHandler(logger *logging.Logger, db *gorm.DB) handlers.Handler {
+func NewHandler(logger *logging.Logger, db *gorm.DB, cfg *config.Config) handlers.Handler {
 	return &handler{
 		logger,
 		db,
+		cfg,
 	}
 }
 
@@ -35,8 +38,8 @@ func (h *handler) Register(router *httprouter.Router) {
 	}
 
 	router.GET("/", h.Home)
-	router.POST("/register", dbMiddleware(h.RegisterUser)) // Маршрут для регистрации пользователя
-	router.POST("/login", dbMiddleware(h.login))           // Маршрут для авторизации пользователя
-	router.POST("/notes", h.CreateNote)
+	router.POST("/register", dbMiddleware(h.RegisterUser))            // Маршрут для регистрации пользователя
+	router.POST("/login", dbMiddleware(h.Login))                      // Маршрут для авторизации пользователя
+	router.POST("/notes", authMiddleware(dbMiddleware(h.CreateNote))) // Защищенный маршрут для создания заметки
 
 }

@@ -22,13 +22,13 @@ func main() {
 	router := httprouter.New()
 
 	// Читаем конфигурацию приложения
-	cfg := config.GetConfig(logger)
+	cfg := config.GetConfig()
 
 	// Создайте обработчик CORS с параметрами по умолчанию.
 	corsH := cors.Default().Handler(router)
 
 	// Регистрируем обработчик в роутере
-	handler := routes.NewHandler(logger, db)
+	handler := routes.NewHandler(logger, db, cfg)
 	handler.Register(router)
 
 	// Запускаем приложение

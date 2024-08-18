@@ -89,3 +89,15 @@
 [31mERRO[0m[2024-08-18T17:35:57+03:00]login.go:34 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Failed authorizations: EOF                   
 [31mERRO[0m[2024-08-18T17:36:36+03:00]login.go:44 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Invalid username: record not found           
 [31mERRO[0m[2024-08-18T17:37:07+03:00]login.go:51 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Invalid password: crypto/bcrypt: hashedPassword is not the hash of the given password 
+[36mINFO[0m[2024-08-18T18:32:25+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T18:46:09+03:00]app.go:48 main.start() The server is running on port :8081          
+[31mERRO[0m[2024-08-18T18:46:19+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[31mERRO[0m[2024-08-18T18:46:24+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[31mERRO[0m[2024-08-18T18:46:29+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[31mERRO[0m[2024-08-18T18:46:41+03:00]registeruser.go:46 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).RegisterUser() Username alredy exists : UNIQUE constraint failed: users.username 
+[36mINFO[0m[2024-08-18T18:46:58+03:00]app.go:48 main.start() The server is running on port :8081          
+[31mERRO[0m[2024-08-18T18:47:13+03:00]login.go:71 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Failed to generate token: key is of invalid type 
+[36mINFO[0m[2024-08-18T18:47:42+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-18T18:50:22+03:00]app.go:48 main.start() The server is running on port :8081          
+[31mERRO[0m[2024-08-18T18:50:36+03:00]login.go:51 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Invalid password: crypto/bcrypt: hashedPassword is not the hash of the given password 
+[31mERRO[0m[2024-08-18T18:50:46+03:00]login.go:51 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Invalid password: crypto/bcrypt: hashedPassword is not the hash of the given password 

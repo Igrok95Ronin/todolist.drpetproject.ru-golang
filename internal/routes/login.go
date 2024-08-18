@@ -11,7 +11,7 @@ import (
 )
 
 // Определяем секретный ключ для подписи JWT токенов
-var mySigningKey = []byte("supersecretkey")
+//var mySigningKey = []byte("supersecretkey")
 
 // Структура для входных данных при авторизации пользователя
 type LoginInput struct {
@@ -26,7 +26,7 @@ type MyCustomClaims struct {
 }
 
 // Обработчик для авторизации пользователя
-func (h *handler) login(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+func (h *handler) Login(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	var input LoginInput
 	// Декодируем JSON данные из тела запроса в структуру LoginInput
 	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
@@ -61,8 +61,8 @@ func (h *handler) login(w http.ResponseWriter, r *http.Request, _ httprouter.Par
 		},
 	}
 
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims) // создаем новый токен с использованием HMAC SHA256
-	tokenString, err := token.SignedString(mySigningKey)       // подписываем токен
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)         // создаем новый токен с использованием HMAC SHA256
+	tokenString, err := token.SignedString([]byte(h.cfg.MySigningKey)) // подписываем токен
 	if err != nil {
 		http.Error(w, "Failed to generate token", http.StatusInternalServerError) // если ошибка, возвращаем статус 500
 		h.logger.Errorf("Failed to generate token: %s", err)
