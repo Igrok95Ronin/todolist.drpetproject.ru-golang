@@ -29,7 +29,7 @@ func main() {
 
 	// Регистрируем обработчик в роутере
 	handler := routes.NewHandler(logger, db, cfg)
-	handler.Register(router)
+	handler.Routes(router)
 
 	// Запускаем приложение
 	start(corsH, cfg, logger)

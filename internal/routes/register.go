@@ -1,46 +1,51 @@
 package routes
 
 import (
-	"context"
-	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/config"
-	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/handlers"
-	"github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/pkg/logging"
+	"encoding/json"
 	"github.com/jinzhu/gorm"
 	"github.com/julienschmidt/httprouter"
+	"golang.org/x/crypto/bcrypt"
 	"net/http"
 )
 
-var _ handlers.Handler = &handler{} // Проверяем что интерфейс реализуется
-
-type handler struct {
-	logger *logging.Logger
-	db     *gorm.DB
-	cfg    *config.Config
+// Структура для входных данных при регистрации пользователя
+type RegisterInput struct {
+	Username string `json:"username"` // имя пользователя
+	Password string `json:"password"` // пароль пользователя
 }
 
-// Заполняем структуру
-func NewHandler(logger *logging.Logger, db *gorm.DB, cfg *config.Config) handlers.Handler {
-	return &handler{
-		logger,
-		db,
-		cfg,
-	}
-}
-
-func (h *handler) Register(router *httprouter.Router) {
-	// Middleware для добавления базы данных в контекст
-	dbMiddleware := func(next httprouter.Handle) httprouter.Handle {
-		return func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-			ctx := context.WithValue(r.Context(), "db", h.db)
-			next(w, r.WithContext(ctx), ps)
-		}
+// Обработчик для регистрации нового пользователя
+func (h *handler) Register(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	var input RegisterInput
+	// Декодируем JSON данные из тела запроса в структуру RegisterInput
+	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		h.logger.Errorf("Failed Register: %s", err)
+		return
 	}
 
-	router.GET("/", h.Home)
-	router.POST("/register", dbMiddleware(h.RegisterUser))                  // Маршрут для регистрации пользователя
-	router.POST("/login", dbMiddleware(h.Login))                            // Маршрут для авторизации пользователя
-	router.POST("/notes", authMiddleware(dbMiddleware(h.CreateNote)))       // Защищенный маршрут для создания заметки
-	router.GET("/notes", authMiddleware(dbMiddleware(h.GetNotes)))          // Защищенный маршрут для получения всех заметок пользователя
-	router.PUT("/notes/:id", authMiddleware(dbMiddleware(h.UpdateNote)))    // Защищенный маршрут для обновления заметки
-	router.DELETE("/notes/:id", authMiddleware(dbMiddleware(h.DeleteNote))) // Защищенный маршрут для удаления заметки
+	// Хешируем пароль
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(input.Password), bcrypt.DefaultCost)
+	if err != nil {
+		http.Error(w, "Failed to hash password", http.StatusInternalServerError)
+		h.logger.Errorf("Failed to hash password : %s", err)
+		return
+	}
+
+	// Создаем пользователя с хешированным паролем
+	user := User{
+		Username: input.Username,
+		Password: string(hashedPassword),
+	}
+
+	// Получаем объект базы данных из контекста запроса
+	db := r.Context().Value("db").(*gorm.DB)
+	// Сохраняем пользователя в базе данных
+	if err = db.Create(&user).Error; err != nil {
+		http.Error(w, "Username already exists", http.StatusBadRequest)
+		h.logger.Errorf("Username alredy exists : %s", err)
+		return
+	}
+
+	w.Write([]byte("Registration successful")) // отправляем успешный ответ
 }
