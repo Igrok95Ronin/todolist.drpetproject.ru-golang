@@ -37,9 +37,10 @@ func (h *handler) Register(router *httprouter.Router) {
 	}
 
 	router.GET("/", h.Home)
-	router.POST("/register", dbMiddleware(h.RegisterUser))               // Маршрут для регистрации пользователя
-	router.POST("/login", dbMiddleware(h.Login))                         // Маршрут для авторизации пользователя
-	router.POST("/notes", authMiddleware(dbMiddleware(h.CreateNote)))    // Защищенный маршрут для создания заметки
-	router.GET("/notes", authMiddleware(dbMiddleware(h.GetNotes)))       // Защищенный маршрут для получения всех заметок пользователя
-	router.PUT("/notes/:id", authMiddleware(dbMiddleware(h.UpdateNote))) // Защищенный маршрут для обновления заметки
+	router.POST("/register", dbMiddleware(h.RegisterUser))                  // Маршрут для регистрации пользователя
+	router.POST("/login", dbMiddleware(h.Login))                            // Маршрут для авторизации пользователя
+	router.POST("/notes", authMiddleware(dbMiddleware(h.CreateNote)))       // Защищенный маршрут для создания заметки
+	router.GET("/notes", authMiddleware(dbMiddleware(h.GetNotes)))          // Защищенный маршрут для получения всех заметок пользователя
+	router.PUT("/notes/:id", authMiddleware(dbMiddleware(h.UpdateNote)))    // Защищенный маршрут для обновления заметки
+	router.DELETE("/notes/:id", authMiddleware(dbMiddleware(h.DeleteNote))) // Защищенный маршрут для удаления заметки
 }
