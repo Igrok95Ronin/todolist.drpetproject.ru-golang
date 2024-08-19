@@ -101,3 +101,11 @@
 [36mINFO[0m[2024-08-18T18:50:22+03:00]app.go:48 main.start() The server is running on port :8081          
 [31mERRO[0m[2024-08-18T18:50:36+03:00]login.go:51 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Invalid password: crypto/bcrypt: hashedPassword is not the hash of the given password 
 [31mERRO[0m[2024-08-18T18:50:46+03:00]login.go:51 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).login() Invalid password: crypto/bcrypt: hashedPassword is not the hash of the given password 
+[36mINFO[0m[2024-08-18T19:05:10+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-19T09:31:09+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-19T09:32:16+03:00]app.go:48 main.start() The server is running on port :8081          
+[31mERRO[0m[2024-08-19T09:32:26+03:00]createnote.go:35 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).CreateNote() User not found: record not found             
+[31mERRO[0m[2024-08-19T09:33:26+03:00]login.go:44 github.com/Igrok95Ronin/todolist.drpetproject.ru-golang.git/internal/routes.(*handler).Login() Invalid username: record not found           
+[36mINFO[0m[2024-08-19T09:37:59+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-19T09:40:42+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-19T09:41:09+03:00]app.go:48 main.start() The server is running on port :8081          

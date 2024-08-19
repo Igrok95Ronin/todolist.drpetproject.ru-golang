@@ -20,6 +20,6 @@ func InitDB() *gorm.DB {
 		panic("Failed to connect database") // если не удается подключиться к базе данных, выходим с ошибкой
 	}
 
-	db.AutoMigrate(&User{})
+	db.AutoMigrate(&User{}, &Note{})
 	return db
 }
