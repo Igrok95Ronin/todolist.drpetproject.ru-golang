@@ -113,3 +113,4 @@
 [36mINFO[0m[2024-08-19T14:49:40+03:00]app.go:48 main.start() The server is running on port :8081          
 [36mINFO[0m[2024-08-19T14:51:27+03:00]app.go:48 main.start() The server is running on port :8081          
 [36mINFO[0m[2024-08-19T14:52:05+03:00]app.go:48 main.start() The server is running on port :8081          
+[36mINFO[0m[2024-08-19T14:52:28+03:00]app.go:48 main.start() The server is running on port :8081          
